@@ -1,0 +1,47 @@
+# ML Challenge 2025: Smart Product Pricing Solution
+
+**Team Name:** not_taken
+**Team Members:** Vedika Jain, Rahul Pardasani, Vasu Dhull 
+**Submission Date:** October 13, 2025
+
+---
+
+## 1. Executive Summary
+Product labels contain clues to the target audience's spending habits, and consequently, the probable price. We extract the labels and integrate catalogue content to build a corpus for training a BERT variant.
+
+
+
+---
+
+## 2. Methodology Overview
+
+### 2.1 Problem Analysis
+The product images provide additional context to the catalogue content. The product labelling contains words to target its intended audience, which gives an idea about their spending habits and consequently the price of the product. The data was found to be right skewed, highlighting how Amazon is the platform of choice for daily needs and reliability.
+
+**Key Observations:**
+
+### 2.2 Solution Strategy
+We take a multimodal approach, extracting product labelling through OCR, and using it in conjunction with the catalogue content to build our corpus. We use EasyOCR for this purpose, and fine-tune Huawei's TinyBERT 4L model with a regression head.
+
+**Approach Type:** Single Model  
+**Core Innovation:** Feature Extraction from Product Images
+
+---
+
+
+## 3. Model Performance
+
+### 3.1 Validation Results
+- **SMAPE Score:** 51.62
+
+---
+
+## 4. Scope for Improvement
+
+The product's packaging, which includes the material, the colours, the look of the product, also give insights about the target audience. A CNN could've been incorporated to build an ensemble learning model. Efforts to train a CLIP model weren't fruitful.
+
+
+## Appendix
+
+### A. Code artefacts
+https://drive.google.com/file/d/1DpEipIR3JAk3sn8aNQKSFEH4q8X0cpJS/view?usp=sharing
